@@ -54,8 +54,14 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  let maxChar = [];
+  let arrSorted = charArray.sort((elem1, elem2) => {
+    return (elem1.children.length > elem2.children.length) ? maxChar = 1 :
+      (elem1.children.length < elem2.children.length) ? maxChar = -1 :
+        (elem1.name > elem2.name) ? maxChar = 1 : maxChar = -1;
+  });
+  return arrSorted;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -65,6 +71,9 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   // Solution code here...
+  let regexCheck = /w/;
+  let retData = regexCheck.test(str);
+  return retData;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,6 +90,9 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  let regexCheck = /[0-9]/;
+  let retData = regexCheck.test(input);
+  return retData;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +104,9 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
+  let regexCheck = 'world';
+  let retData = input.includes(regexCheck);
+  return retData;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,6 +119,9 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let regexCheck = /\b[A-Z]\w+/g;
+  let retData = str.match(regexCheck) || [];
+  return retData;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,6 +132,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let regexCheck = /^[A-J]/;
+  let retData = arr.filter(item =>
+    regexCheck.test(item)
+  );
+  return retData;
 };
 
 /* ------------------------------------------------------------------------------------------------
