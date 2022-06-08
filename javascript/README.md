@@ -6,6 +6,7 @@
 [array-reverse](./array-reverse/README.md)<br />
 [insertShiftArray](./insertShiftArray/README.md)<br />
 [BinarySearch](./array-binary-search/README.md)<br />
+[Fibonacci](./Class%2004/README.md)<br />
 
 ### **Data Structures:**
 [Linked List](./linked-list/Linked-Lists.md)<br />
