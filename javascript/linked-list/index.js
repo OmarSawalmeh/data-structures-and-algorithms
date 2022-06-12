@@ -20,7 +20,34 @@ console.log(ll.includes(0)); // -----> return true
 console.log(ll.includes(33)); // -----> return true
 console.log(ll.includes(37)); // -----> return false
 
-// Return String representing all the values in the Linked Lis
+//
+console.log('---------YNWA--------');
+ll.insertBefor(0, 17);
+console.log('---------YNWA--------');
+ll.insertAfter(15, 7);
+ll.insertAfter(7, 77);
+ll.insertAfter(33, 44);
+
+// Return String representing all the values in the Linked Lis.....
 console.log(ll.toString());
 
+// Print All Node As Values.....
 ll.printAll();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
