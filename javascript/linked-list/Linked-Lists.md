@@ -15,8 +15,10 @@ Write a method for the Linked List class which takes a value and add it to End O
 - Big O for Append is O(n) and space O(1) 
 - Big O for Insert is O(1) and space O(1) 
 - Big O for Includes is O(n) and space O(1)
-- Big O for InsertAfter is O(n) and space O(1) 
-- Big O for InsertBefore is O(n) and space O(1) 
+- Big O for **InsertAfter** is O(n) and space O(1)
+![](./img/InsertAfter.jpg) 
+- Big O for **InsertBefore** is O(n) and space O(1)
+![](./img/InsertBefore2.jpg) 
 
 ---
 
