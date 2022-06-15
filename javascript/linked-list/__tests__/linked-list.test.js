@@ -96,7 +96,7 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual(`${11} -> ${0} -> ${60} -> ${80} -> ${7} -> NULL`);
   });
 
-  
+
   //👇️ All These test about kthFromEnd method.....
   test('Linked-list index is out of range.', ()=>{
     let list = new LinkedList();
