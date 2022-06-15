@@ -34,6 +34,11 @@ console.log(ll.toString());
 // Print All Node As Values.....
 ll.printAll();
 
+// k-th value from the end of a linked list......
+console.log('--------k-th value from the end of a linked list.----------');
+let kth_value = ll.kthFromEnd(0);
+console.log(kth_value);
+
 
 
 

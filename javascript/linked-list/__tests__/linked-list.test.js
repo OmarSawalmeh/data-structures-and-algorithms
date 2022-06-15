@@ -96,4 +96,58 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual(`${11} -> ${0} -> ${60} -> ${80} -> ${7} -> NULL`);
   });
 
+  
+  //👇️ All These test about kthFromEnd method.....
+  test('Linked-list index is out of range.', ()=>{
+    let list = new LinkedList();
+    list.append(60);
+    list.append(80);
+    list.insert(11);// 11 60 80
+
+    // Where k is greater than the length of the linked list....
+    expect(list.kthFromEnd(5)).toEqual('IndexOutOfRangeException: Linked-list index is out of range.');
+  });
+
+  test('Linked-list index is out of range.', ()=>{
+    let list = new LinkedList();
+    list.append(60);
+    list.append(80);
+    list.insert(11);// 11 60 80
+
+    // Where k and the length of the list are the same....
+    expect(list.kthFromEnd(3)).toEqual('IndexOutOfRangeException: Linked-list index is out of range.');
+  });
+
+  test('Linked-list index is not a positive integer.', ()=>{
+    let list = new LinkedList();
+    list.append(60);
+    list.append(80);
+    list.insert(11);// 11 60 80
+
+    // Where k is not a positive integer....
+    expect(list.kthFromEnd(-3)).toEqual(undefined);
+  });
+
+  test('Checke of Linked-list Where sized equal 1.', ()=>{
+    let list = new LinkedList();
+    list.append(60);
+
+    // Where the linked list is of a size 1....
+    expect(list.kthFromEnd(0)).toEqual(60);
+  });
+
+  test('Checke somewhere in the middle of the linked list', ()=>{
+    let list = new LinkedList();
+    list.append(60);
+    list.append(80);
+    list.insert(11);
+    list.insertAfter(11, 0);
+    list.insertAfter(80, 7);
+    //               11 -> 0 -> 60 -> 80 -> 7
+    // After erverse 7 -> 80 -> 60 ->0 -> 11
+
+    // Where k is not at the end, but somewhere in the middle of the linked list....
+    expect(list.kthFromEnd(1)).toEqual(80);
+  });
+
 });

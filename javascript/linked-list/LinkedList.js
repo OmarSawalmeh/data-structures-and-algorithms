@@ -111,6 +111,37 @@ class LinkedList {
     }
   }
 
+  // [[ k-th ]] value from the end of a linked list......
+  kthFromEnd(k){
+    let obj = {};
+    let index = 0;
+    let currNode = this.head;
+    while (currNode !== null) {
+      obj[index] = currNode.value;
+      currNode = currNode.next;
+      index += 1;
+    }
+    console.log(obj);
+
+    index = 0;
+    let value;
+    const reversedKeys = Object.keys(obj).reverse();
+
+    if(k >= reversedKeys.length){
+      return ('IndexOutOfRangeException: Linked-list index is out of range.');
+    }
+
+    reversedKeys.forEach(key => {
+      if(index === k){
+        value = (obj[key]);
+      }
+      index += 1;
+    });
+
+    return value;
+  }
+
+
 }
 
 module.exports = LinkedList;
