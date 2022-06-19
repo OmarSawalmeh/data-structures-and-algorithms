@@ -96,7 +96,6 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual(`${11} -> ${0} -> ${60} -> ${80} -> ${7} -> NULL`);
   });
 
-
   //👇️ All These test about kthFromEnd method.....
   test('Linked-list index is out of range.', ()=>{
     let list = new LinkedList();
@@ -149,5 +148,55 @@ describe('Linked List', () => {
     // Where k is not at the end, but somewhere in the middle of the linked list....
     expect(list.kthFromEnd(1)).toEqual(80);
   });
+
+
+  //👇️ All These test about zipLists method.....
+  test('Checke the linked list contain all nodes from two list', ()=>{
+    const ll1 = new LinkedList();
+    ll1.append(7);
+    ll1.append(9);
+    ll1.append(11);
+    ll1.append(15);
+    ll1.append(24);
+    const ll2 = new LinkedList();
+    ll2.append(0);
+    ll2.append(0);
+    ll2.append(0);
+    ll2.append(0);
+    ll2.append(0);
+
+    const zipped = ll1.zipLists(ll1, ll2);
+    expect(zipped.toString()).toEqual('7 -> 0 -> 9 -> 0 -> 11 -> 0 -> 15 -> 0 -> 24 -> 0 -> NULL');
+  });
+
+  test('When the first argument(list1) empty', ()=>{
+    const ll1 = new LinkedList();
+    ll1.append(7);
+    ll1.append(9);
+    ll1.append(11);
+    ll1.append(15);
+    ll1.append(24);
+    const ll2 = new LinkedList();
+
+
+    const zipped = ll1.zipLists(ll1, ll2);
+    expect(zipped.toString()).toEqual('7 -> 9 -> 11 -> 15 -> 24 -> NULL');
+  });
+
+  test('When the second argument(list2) empty', ()=>{
+    const ll1 = new LinkedList();
+
+    const ll2 = new LinkedList();
+    ll2.append(0);
+    ll2.append(0);
+    ll2.append(0);
+    ll2.append(0);
+    ll2.append(0);
+
+    const zipped = ll1.zipLists(ll1, ll2);
+    expect(zipped.toString()).toEqual('0 -> 0 -> 0 -> 0 -> 0 -> NULL');
+  });
+
+
 
 });
