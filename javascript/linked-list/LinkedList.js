@@ -141,6 +141,26 @@ class LinkedList {
     return value;
   }
 
+  zipLists(list1, list2){
+    const ll = new LinkedList();
+
+    let curr1 = list1.head;
+    let curr2 = list2.head;
+
+    while(curr1 !== null | curr2 !== null){
+      if(curr1 !== null){
+        ll.append(curr1.value);
+        curr1 = curr1.next;
+      }
+      if(curr2 !== null){
+        ll.append(curr2.value);
+        curr2 = curr2.next;
+      }
+    }
+
+    return ll;
+  }
+
 
 }
 

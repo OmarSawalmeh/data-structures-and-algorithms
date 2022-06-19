@@ -40,6 +40,27 @@ let kth_value = ll.kthFromEnd(0);
 console.log(kth_value);
 
 
+///////////////////////////////////////////////////////////////////////////////////
+console.log('--------- zipLists ----------');
+const ll1 = new LinkedList();
+ll1.append(7);
+ll1.append(9);
+ll1.append(11);
+ll1.append(15);
+ll1.append(24);
+const ll2 = new LinkedList();
+ll2.append(0);
+ll2.append(0);
+ll2.append(0);
+ll2.append(0);
+ll2.append(0);
+
+const zipped = ll1.zipLists(ll1, ll2);
+console.log(zipped.printAll());
+console.log(zipped.toString());
+
+
+
 
 
 
