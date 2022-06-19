@@ -21,8 +21,8 @@ Write a method for the Linked List class which takes a value and add it to End O
 ![](./img/InsertBefore2.jpg) 
 - Big O for **kthFromEnd** is O(n^2) and space O(n)
 ![](./img/kthFromEnd-LinkedList.jpg) 
-- Big O for **zipLists** is O(n) and space O(1)
-![](./img/zipLists.jpg) 
+
+
 ---
 
 ## API
